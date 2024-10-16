@@ -1,4 +1,4 @@
-window.isDevVersion = true
+window.isDevVersion = false
 if (isDevVersion) {
       //FPS stuff
     window.times = []
@@ -62,7 +62,7 @@ reset()
 
 //If the user confirms the hard reset, resets all variables, saves and refreshes the page
 function hardReset() {
-    if (confirm("Are you sure you want to reset? You will lose everything!")) {
+    if (confirm("你确定要重置吗？你会失去一切的！")) {
         reset()
         save()
         location.reload()
@@ -84,9 +84,9 @@ function setAutoSave() {
 function exportGame() {
     save()
     navigator.clipboard.writeText(btoa(JSON.stringify(game))).then(function() {
-        alert("Copied to clipboard!")
+        alert("已复制到剪贴板!")
     }, function() {
-        alert("Error copying to clipboard, try again...")
+        alert("复制到剪贴板时出错，请重试...")
     });
 }
   
@@ -99,7 +99,7 @@ function importGame() {
         location.reload()
     }
     else {
-        alert("Invalid input.")
+        alert("无效的输入.")
     }
 }
   
