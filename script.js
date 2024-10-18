@@ -592,7 +592,7 @@ function updateAllCosts() {
 }
 
 function drillSpeedupOn() {
-    drillSpeedup = 2.5;
+    drillSpeedup = 5;
     document.getElementById('drillSpeedupButton').style.backgroundColor = "#066";
     updateProbabilityList()
 }
